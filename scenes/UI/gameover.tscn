@@ -1,0 +1,81 @@
+[gd_scene load_steps=10 format=3 uid="uid://3nvmqqpqbtd5"]
+
+[ext_resource type="Script" uid="uid://bgg0bnpg7jkl7" path="res://scenes/UI/gameover.gd" id="1_teqwg"]
+[ext_resource type="Texture2D" uid="uid://cx6fjaicxgqo5" path="res://UIAssets/gameover/gameover.png" id="1_wjqpn"]
+[ext_resource type="Texture2D" uid="uid://clwkdx8ciicof" path="res://UIAssets/gameover/Group 5.png" id="2_jdsq4"]
+[ext_resource type="Texture2D" uid="uid://uyqs3q77mwbm" path="res://UIAssets/Home (1).png" id="2_x8yms"]
+[ext_resource type="Texture2D" uid="uid://dspwk3x5bjpao" path="res://UIAssets/gameover/Gameovertxt.png" id="3_xxxwk"]
+[ext_resource type="Texture2D" uid="uid://coxp46lx27m5l" path="res://UIAssets/congratulations/opacitated rect.png" id="4_rpmch"]
+[ext_resource type="Texture2D" uid="uid://dbfh88hutrwhc" path="res://scenes/question/ui/LJKJRESTARTIQHEIT3 (1).png" id="7_h5s6u"]
+[ext_resource type="Texture2D" uid="uid://xninl3y8qdap" path="res://scenes/question/ui/INFECTEDMESSAGE.png" id="8_858j2"]
+[ext_resource type="Texture2D" uid="uid://dowtqg53kcskq" path="res://scenes/question/ui/GOTOHOMENEW.png" id="9_f7nfp"]
+
+[node name="Gameover" type="Node"]
+script = ExtResource("1_teqwg")
+
+[node name="Home(1)" type="Sprite2D" parent="."]
+position = Vector2(578, 355)
+scale = Vector2(0.4577393, 0.4577393)
+texture = ExtResource("2_x8yms")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wjqpn")
+
+[node name="OpacitatedRect" type="Sprite2D" parent="."]
+position = Vector2(593, 354.00003)
+scale = Vector2(0.5768215, 0.57682157)
+texture = ExtResource("4_rpmch")
+
+[node name="Group5" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(603, 347)
+scale = Vector2(0.8246154, 0.8246154)
+texture = ExtResource("2_jdsq4")
+
+[node name="Gameovertxt" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(584, 196)
+scale = Vector2(0.82, 0.82)
+texture = ExtResource("3_xxxwk")
+
+[node name="restart" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="restart"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 425.0
+offset_top = 344.0
+offset_right = 775.0
+offset_bottom = 438.0
+texture = ExtResource("7_h5s6u")
+
+[node name="Infectedmessage" type="Sprite2D" parent="restart"]
+texture_filter = 1
+position = Vector2(599, 292)
+scale = Vector2(0.6888889, 0.6888889)
+texture = ExtResource("8_858j2")
+
+[node name="gotohome" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="gotohome"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 388.0
+offset_top = 463.0
+offset_right = 802.0
+offset_bottom = 557.0
+texture = ExtResource("9_f7nfp")
+
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="gotohome" to="." method="_on_gotohome_pressed"]

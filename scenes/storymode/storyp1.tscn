@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://c7crjw0qpvwc4"]
+
+[ext_resource type="Texture2D" uid="uid://25gqh7cmwyqd" path="res://scenes/storymode/ui/Storybg.png" id="1_vp2lf"]
+[ext_resource type="Texture2D" uid="uid://buk6cwxcrlb2i" path="res://scenes/storymode/ui/Next.png" id="2_lf2p5"]
+[ext_resource type="Script" uid="uid://34onxp14755a" path="res://scenes/storymode/next.gd" id="3_m26he"]
+[ext_resource type="Texture2D" uid="uid://dkxl4nix13uod" path="res://UIAssets/Credits/opacitated rect.png" id="3_qqs8k"]
+[ext_resource type="Texture2D" uid="uid://deskwkdsyp8lo" path="res://AKSUMSTUFF.png" id="4_vgsle"]
+[ext_resource type="Texture2D" uid="uid://uyqs3q77mwbm" path="res://UIAssets/Home (1).png" id="5_qqs8k"]
+[ext_resource type="Texture2D" uid="uid://cfs6kc4mb1bbg" path="res://scenes/storymode/storylinetitle.png" id="7_wh6m2"]
+[ext_resource type="Texture2D" uid="uid://u6uikt56xn5x" path="res://UIAssets/congratulations/GashaLogo.png" id="8_wh6m2"]
+
+[node name="Storyp1" type="Node2D"]
+
+[node name="Home(1)" type="Sprite2D" parent="."]
+position = Vector2(555, 348)
+scale = Vector2(0.45071933, 0.45071948)
+texture = ExtResource("5_qqs8k")
+
+[node name="Storybg" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577.00006, 331.00003)
+scale = Vector2(1.498008, 1.498008)
+texture = ExtResource("1_vp2lf")
+
+[node name="OpacitatedRect" type="Sprite2D" parent="."]
+position = Vector2(589, 326)
+scale = Vector2(0.6022967, 0.60229677)
+texture = ExtResource("3_qqs8k")
+
+[node name="Aksumstuff" type="Sprite2D" parent="."]
+position = Vector2(588, 288)
+scale = Vector2(0.3046559, 0.30465588)
+texture = ExtResource("4_vgsle")
+
+[node name="Next" type="Button" parent="."]
+texture_filter = 1
+offset_left = 780.0
+offset_top = 513.0
+offset_right = 964.0
+offset_bottom = 574.0
+icon = ExtResource("2_lf2p5")
+script = ExtResource("3_m26he")
+
+[node name="Storylinetitle" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(584.9359, 133)
+scale = Vector2(0.6666666, 0.6666667)
+texture = ExtResource("7_wh6m2")
+
+[node name="GashaLogo" type="Sprite2D" parent="."]
+position = Vector2(327, 541)
+scale = Vector2(0.5344827, 0.5344828)
+texture = ExtResource("8_wh6m2")
+
+[connection signal="pressed" from="Next" to="Next" method="_on_pressed"]

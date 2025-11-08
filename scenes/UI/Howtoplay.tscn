@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://fpr83a6t7ytd"]
+
+[ext_resource type="Script" uid="uid://lgn04ed4mwie" path="res://scenes/UI/howtoplay.gd" id="1_n2dhc"]
+[ext_resource type="Texture2D" uid="uid://uyqs3q77mwbm" path="res://UIAssets/Home (1).png" id="2_n2dhc"]
+[ext_resource type="Texture2D" uid="uid://dkxl4nix13uod" path="res://UIAssets/Credits/opacitated rect.png" id="3_vh6bl"]
+[ext_resource type="Texture2D" uid="uid://eldbbkhy1yl3" path="res://UIAssets/Credits/BackButton.png" id="4_qjbmf"]
+[ext_resource type="Texture2D" uid="uid://bto7tcy8odqcf" path="res://UIAssets/howtoplay/somestuffjustyap.png" id="4_w8pd3"]
+[ext_resource type="Texture2D" uid="uid://ddftlrmwhiduo" path="res://UIAssets/howtoplay/How To Play.png" id="5_w8pd3"]
+[ext_resource type="Texture2D" uid="uid://b3sciqhw82mg" path="res://UIAssets/Credits/GashaLogo.png" id="6_vh6bl"]
+
+[node name="Howtoplay" type="Node"]
+script = ExtResource("1_n2dhc")
+
+[node name="Home(1)" type="Sprite2D" parent="."]
+position = Vector2(581, 325)
+scale = Vector2(0.4052952, 0.4052953)
+texture = ExtResource("2_n2dhc")
+
+[node name="OpacitatedRect" type="Sprite2D" parent="."]
+position = Vector2(586, 319.00003)
+scale = Vector2(0.5991287, 0.5991288)
+texture = ExtResource("3_vh6bl")
+
+[node name="Somestuffjustyap" type="Sprite2D" parent="."]
+position = Vector2(604, 331)
+scale = Vector2(0.5993282, 0.5993282)
+texture = ExtResource("4_w8pd3")
+
+[node name="back" type="Button" parent="."]
+offset_top = 12.0
+offset_right = 8.0
+offset_bottom = 20.0
+
+[node name="TextureRect" type="TextureRect" parent="back"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 255.0
+offset_top = 486.0
+offset_right = 432.72153
+offset_bottom = 540.0
+texture = ExtResource("4_qjbmf")
+expand_mode = 1
+
+[node name="HowToPlay" type="Sprite2D" parent="."]
+position = Vector2(570.00006, 120)
+scale = Vector2(0.5361446, 0.53614455)
+texture = ExtResource("5_w8pd3")
+
+[node name="GashaLogo" type="Sprite2D" parent="."]
+position = Vector2(824.25867, 529.125)
+scale = Vector2(0.6235634, 0.6235634)
+texture = ExtResource("6_vh6bl")
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

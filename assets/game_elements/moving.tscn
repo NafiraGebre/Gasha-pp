@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb4bf75iw2m7t"]
+
+[ext_resource type="Texture2D" uid="uid://bieogejoo6ae1" path="res://UIAssets/Terrain (16x16).png" id="1_4uber"]
+[ext_resource type="Script" uid="uid://b1ejuge16xb1b" path="res://scenes/levels/path_follow_2d.gd" id="2_r32la"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_022ip"]
+size = Vector2(17.520983, 6.6110687)
+
+[sub_resource type="Curve2D" id="Curve2D_edoqj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 318, 427, 0, 0, 0, 0, 387, 427, 0, 0, 0, 0, 391, 480, 0, 0, 0, 0, 314, 482, 0, 0, 0, 0, 318, 426, 0, 0, 0, 0, 390, 427)
+}
+point_count = 6
+
+[node name="moving" type="Node"]
+
+[node name="StaticBody2D" type="AnimatableBody2D" parent="."]
+position = Vector2(318, 427)
+rotation = 3.0683296
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(7.4851017, -0.9102812)
+scale = Vector2(0.60417736, 1.0770447)
+texture = ExtResource("1_4uber")
+region_enabled = true
+region_rect = Rect2(271.92816, 15.284943, 48.01767, 5.958397)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(7.541107, -0.87246704)
+scale = Vector2(1.6687872, 1.0770448)
+shape = SubResource("RectangleShape2D_022ip")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_edoqj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(318, 427)
+rotation = 3.0683296
+rotates = false
+script = ExtResource("2_r32la")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D/PathFollow2D"]
+remote_path = NodePath("../../../StaticBody2D")

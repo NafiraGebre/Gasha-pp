@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://cw658jpelo0vc"]
+
+[ext_resource type="Script" uid="uid://jxctcfc2jn31" path="res://scenes/UI/aboutgroup.gd" id="1_smj3c"]
+[ext_resource type="Texture2D" uid="uid://uyqs3q77mwbm" path="res://UIAssets/Home (1).png" id="2_fekbi"]
+[ext_resource type="Texture2D" uid="uid://dkxl4nix13uod" path="res://UIAssets/Credits/opacitated rect.png" id="3_4ejff"]
+[ext_resource type="Texture2D" uid="uid://eldbbkhy1yl3" path="res://UIAssets/Credits/BackButton.png" id="4_ed3ak"]
+[ext_resource type="Texture2D" uid="uid://b3sciqhw82mg" path="res://UIAssets/Credits/GashaLogo.png" id="5_smj3c"]
+[ext_resource type="Texture2D" uid="uid://baotaxxt4fe2d" path="res://UIAssets/Credits/Credits.png" id="6_bs0ix"]
+[ext_resource type="Texture2D" uid="uid://dh7by167lxa48" path="res://UIAssets/Credits/Yosen.png" id="7_vbm00"]
+[ext_resource type="Texture2D" uid="uid://coo2kyjirob1" path="res://UIAssets/Credits/Nafira.png" id="8_x7rfu"]
+[ext_resource type="Texture2D" uid="uid://bw7skdfxlcg0i" path="res://UIAssets/Credits/firanew.png" id="9_bs0ix"]
+
+[node name="Aboutgroup" type="Node"]
+script = ExtResource("1_smj3c")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -65.0
+offset_top = -118.0
+offset_right = 88.67798
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fekbi")
+expand_mode = 1
+
+[node name="OpacitatedRect" type="Sprite2D" parent="."]
+position = Vector2(560, 340.00003)
+scale = Vector2(0.52052534, 0.5205254)
+texture = ExtResource("3_4ejff")
+
+[node name="backbutton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="backbutton"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 246.0
+offset_top = 471.0
+offset_right = 403.97467
+offset_bottom = 519.0
+texture = ExtResource("4_ed3ak")
+expand_mode = 1
+
+[node name="GashaLogo" type="Sprite2D" parent="."]
+position = Vector2(785.00006, 494)
+scale = Vector2(0.47701147, 0.4770115)
+texture = ExtResource("5_smj3c")
+
+[node name="Credits" type="Sprite2D" parent="."]
+position = Vector2(563, 173)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("6_bs0ix")
+
+[node name="Yosen" type="Sprite2D" parent="."]
+position = Vector2(449.9484, 241.375)
+scale = Vector2(0.49475515, 0.49475515)
+texture = ExtResource("7_vbm00")
+
+[node name="Nafira" type="Sprite2D" parent="."]
+position = Vector2(455.0996, 329.375)
+scale = Vector2(0.47727263, 0.47727263)
+texture = ExtResource("8_x7rfu")
+
+[node name="Firanew" type="Sprite2D" parent="."]
+position = Vector2(477.09958, 412.37497)
+scale = Vector2(0.48251775, 0.4825177)
+texture = ExtResource("9_bs0ix")
+
+[connection signal="pressed" from="backbutton" to="." method="_on_backbutton_pressed"]

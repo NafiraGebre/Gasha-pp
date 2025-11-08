@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://qvfybxx745sc"]
+
+[ext_resource type="Script" uid="uid://cgpe8yq1t76tt" path="res://scenes/UI/welcome_menu.gd" id="1_t0ryy"]
+[ext_resource type="Texture2D" uid="uid://uyqs3q77mwbm" path="res://UIAssets/Home (1).png" id="2_irp22"]
+[ext_resource type="Texture2D" uid="uid://cdncie7g42qr7" path="res://UIAssets/Group 21.png" id="3_a1uif"]
+[ext_resource type="Texture2D" uid="uid://i2bgdxyp4d37" path="res://UIAssets/NewGame.png" id="4_a1uif"]
+[ext_resource type="Texture2D" uid="uid://dv0o4luc64dpn" path="res://UIAssets/HowToPlay.png" id="5_ut1x1"]
+[ext_resource type="Texture2D" uid="uid://bqkevigssx0sr" path="res://UIAssets/Credits.png" id="6_67rrq"]
+[ext_resource type="Texture2D" uid="uid://cxcah66c44bwt" path="res://UIAssets/Settings.png" id="7_sj82k"]
+
+[node name="WelcomeMenu" type="Node"]
+script = ExtResource("1_t0ryy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -147.0
+offset_top = -133.0
+offset_right = 100.60071
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_irp22")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -318.0
+offset_top = -266.0
+offset_right = 332.0943
+offset_bottom = 271.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_a1uif")
+expand_mode = 1
+
+[node name="Newgamebtn" type="Button" parent="."]
+unique_name_in_owner = true
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="Newgamebtn"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 436.0
+offset_top = 222.0
+offset_right = 768.2759
+offset_bottom = 295.0
+texture = ExtResource("4_a1uif")
+expand_mode = 1
+
+[node name="howtoplay" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="howtoplay"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 437.0
+offset_top = 301.0
+offset_right = 770.84485
+offset_bottom = 368.0
+texture = ExtResource("5_ut1x1")
+expand_mode = 1
+
+[node name="aboutgroup2" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="aboutgroup2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 435.0
+offset_top = 374.0
+offset_right = 772.0
+offset_bottom = 437.0
+texture = ExtResource("6_67rrq")
+expand_mode = 1
+
+[node name="Settings" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(600, 306.00003)
+scale = Vector2(0.3106361, 0.38455385)
+texture = ExtResource("7_sj82k")
+
+[connection signal="pressed" from="Newgamebtn" to="." method="_on_newgamebtn_pressed"]
+[connection signal="pressed" from="howtoplay" to="." method="_on_howtoplay_pressed"]
+[connection signal="pressed" from="aboutgroup2" to="." method="_on_aboutgroup_2_pressed"]

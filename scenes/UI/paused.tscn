@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1rqyfu8kweve"]
+
+[ext_resource type="Script" uid="uid://dk8efgvuumpkg" path="res://scenes/UI/paused.gd" id="1_35g5d"]
+[ext_resource type="Texture2D" uid="uid://cdp3u58rf4p2e" path="res://UIAssets/paused/gamepausbg.png" id="2_gc51q"]
+[ext_resource type="Texture2D" uid="uid://dxfnnuvwaihal" path="res://UIAssets/paused/Group 5.png" id="3_wgkjp"]
+[ext_resource type="Texture2D" uid="uid://b1dqlsk1ci2gx" path="res://UIAssets/paused/gamepaustxt.png" id="4_0f636"]
+[ext_resource type="Texture2D" uid="uid://d4lidhy5w5jai" path="res://UIAssets/paused/resume.png" id="5_supq8"]
+[ext_resource type="Texture2D" uid="uid://bob8c77woho0w" path="res://UIAssets/paused/gotohome.png" id="6_wijuh"]
+
+[node name="Paused" type="Node"]
+script = ExtResource("1_35g5d")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gc51q")
+
+[node name="Group5" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(637.00006, 339)
+scale = Vector2(0.7907694, 0.7907694)
+texture = ExtResource("3_wgkjp")
+
+[node name="Gamepaustxt" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(627, 204)
+scale = Vector2(0.8498403, 0.78)
+texture = ExtResource("4_0f636")
+
+[node name="Resume" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="Resume"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 462.0
+offset_top = 283.0
+offset_right = 796.0
+offset_bottom = 377.0
+texture = ExtResource("5_supq8")
+
+[node name="Gotohome" type="Button" parent="."]
+texture_filter = 1
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="Gotohome"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 461.0
+offset_top = 397.0
+offset_right = 795.0
+offset_bottom = 491.0
+texture = ExtResource("6_wijuh")
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Gotohome" to="." method="_on_gotohome_pressed"]

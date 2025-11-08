@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3b0rcbart32o"]
+
+[ext_resource type="Texture2D" uid="uid://uyqs3q77mwbm" path="res://UIAssets/Home (1).png" id="1_8qqsj"]
+[ext_resource type="Texture2D" uid="uid://buk6cwxcrlb2i" path="res://scenes/storymode/ui/Next.png" id="2_8qqsj"]
+[ext_resource type="Texture2D" uid="uid://coxp46lx27m5l" path="res://UIAssets/congratulations/opacitated rect.png" id="2_tdy55"]
+[ext_resource type="Texture2D" uid="uid://cxsi8wi8f7558" path="res://scenes/storymode/ui/Previous.png" id="3_tdy55"]
+
+[node name="Storyp1" type="Node2D"]
+
+[node name="Home(1)" type="Sprite2D" parent="."]
+position = Vector2(547.9999, 350.99994)
+scale = Vector2(0.444501, 0.44450104)
+texture = ExtResource("1_8qqsj")
+
+[node name="OpacitatedRect" type="Sprite2D" parent="."]
+position = Vector2(584, 335)
+scale = Vector2(0.59186906, 0.59186906)
+texture = ExtResource("2_tdy55")
+
+[node name="Next" type="Sprite2D" parent="."]
+position = Vector2(876, 531)
+texture = ExtResource("2_8qqsj")
+
+[node name="Previous" type="Sprite2D" parent="."]
+position = Vector2(644, 531)
+texture = ExtResource("3_tdy55")

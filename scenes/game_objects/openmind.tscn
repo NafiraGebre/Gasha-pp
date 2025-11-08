@@ -1,0 +1,108 @@
+[gd_scene load_steps=16 format=3 uid="uid://b6hg757hwwj8g"]
+
+[ext_resource type="Script" uid="uid://cjs715aq1lcfo" path="res://scenes/game_objects/openmind.gd" id="1_sum7d"]
+[ext_resource type="Texture2D" uid="uid://c0sx76b583iwg" path="res://scenes/game_objects/Big Diamond Idle (18x14).png" id="2_vhglh"]
+[ext_resource type="AudioStream" uid="uid://uih0wgdfnexl" path="res://sound/ding-sound-effect_2.wav" id="3_u5r2d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5r2d"]
+atlas = ExtResource("2_vhglh")
+region = Rect2(0, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hk13v"]
+atlas = ExtResource("2_vhglh")
+region = Rect2(18, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1712u"]
+atlas = ExtResource("2_vhglh")
+region = Rect2(36, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rh3v"]
+atlas = ExtResource("2_vhglh")
+region = Rect2(54, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2o45"]
+atlas = ExtResource("2_vhglh")
+region = Rect2(72, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyn3p"]
+atlas = ExtResource("2_vhglh")
+region = Rect2(90, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kc6b"]
+atlas = ExtResource("2_vhglh")
+region = Rect2(108, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q2yf"]
+atlas = ExtResource("2_vhglh")
+region = Rect2(126, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khkcu"]
+atlas = ExtResource("2_vhglh")
+region = Rect2(144, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gddoc"]
+atlas = ExtResource("2_vhglh")
+region = Rect2(162, 0, 18, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ok4ui"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5r2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hk13v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1712u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rh3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2o45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyn3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kc6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q2yf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khkcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gddoc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wim3b"]
+radius = 26.019224
+
+[node name="Openmind" type="Area2D"]
+script = ExtResource("1_sum7d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.4999998, 2.5595236)
+sprite_frames = SubResource("SpriteFrames_ok4ui")
+autoplay = "default"
+frame_progress = 0.6667326
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wim3b")
+
+[node name="CoinSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_u5r2d")
+volume_db = -4.062
+pitch_scale = 1.25
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

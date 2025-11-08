@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://bb5bdmlrsrxj8"]
+
+[ext_resource type="Script" uid="uid://q0rtw5sgti6y" path="res://scenes/UI/congratulations.gd" id="1_k8fvh"]
+[ext_resource type="Texture2D" uid="uid://cujfk005ut08c" path="res://UIAssets/congratulations/gradbg.png" id="1_p8qmr"]
+[ext_resource type="Texture2D" uid="uid://uyqs3q77mwbm" path="res://UIAssets/Home (1).png" id="3_q5jxi"]
+[ext_resource type="Texture2D" uid="uid://coxp46lx27m5l" path="res://UIAssets/congratulations/opacitated rect.png" id="4_ipis4"]
+[ext_resource type="Texture2D" uid="uid://dowtqg53kcskq" path="res://scenes/question/ui/GOTOHOMENEW.png" id="5_dtqjf"]
+[ext_resource type="Texture2D" uid="uid://dpqhm3rsd7a4a" path="res://scenes/question/ui/CONGRA SENT.png" id="6_yi411"]
+[ext_resource type="Texture2D" uid="uid://bnuw0f0mcl6xj" path="res://scenes/question/ui/confeticone.png" id="7_3umng"]
+
+[node name="Congratulations" type="Node"]
+script = ExtResource("1_k8fvh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_p8qmr")
+
+[node name="Home(1)" type="Sprite2D" parent="."]
+position = Vector2(592, 329)
+scale = Vector2(0.40936863, 0.4093687)
+texture = ExtResource("3_q5jxi")
+
+[node name="OpacitatedRect" type="Sprite2D" parent="."]
+position = Vector2(564, 318.00003)
+scale = Vector2(0.61483634, 0.6148364)
+texture = ExtResource("4_ipis4")
+
+[node name="congra" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="congra"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 364.0
+offset_top = 438.0
+offset_right = 778.0
+offset_bottom = 532.0
+texture = ExtResource("5_dtqjf")
+
+[node name="CongraSent" type="Sprite2D" parent="."]
+position = Vector2(587, 355)
+scale = Vector2(0.71126765, 0.7112676)
+texture = ExtResource("6_yi411")
+
+[node name="Confeticone" type="Sprite2D" parent="."]
+position = Vector2(576, 200.00002)
+scale = Vector2(0.15673833, 0.15673833)
+texture = ExtResource("7_3umng")
+
+[connection signal="pressed" from="congra" to="." method="_on_congra_pressed"]
