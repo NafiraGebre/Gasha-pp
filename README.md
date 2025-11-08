@@ -3,7 +3,7 @@
 ![Godot Version](https://img.shields.io/badge/Godot-4.5-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-A 2D platformer runner game built with Godot 4.5. Navigate through challenging levels, collect coins, defeat enemies, and avoid hazards in this exciting side-scrolling adventure! This project was created by three students for the Daydream Hackathon.
+A 2D platformer runner game built with Godot 4.5. Navigate through challenging levels, collect coins, defeat enemies, and avoid hazards in this exciting side-scrolling adventure! This project was created by three students for the Cyber Game Jam at INSA.
 
 <!-- You can add a screenshot or GIF of your game here! -->
 <!-- ![Gameplay GIF](link_to_your_gif.gif) -->
@@ -63,7 +63,7 @@ A 2D platformer runner game built with Godot 4.5. Navigate through challenging l
 ## 🚀 Getting Started
 
 1.  **Prerequisites**: Ensure you have [Godot 4.5](https://godotengine.org/download) installed.
-2.  **Clone the repository**: `git clone https://github.com/yonaned/Daydream-Hackaton-Godot-Game-with-Speedrun--Squad.git`
+2.  **Clone the repository**: `git clone https://github.com/NafiraGebre/Gasha-pp/`
 3.  **Open in Godot**: Launch Godot and import the `project.godot` file.
 4.  **Run the Game**: Press `F5` or click the play button to start.
 
@@ -72,7 +72,7 @@ A 2D platformer runner game built with Godot 4.5. Navigate through challenging l
 This game was developed by a team of three students:
 
 -   **Yosen Girma**
--   **Yoseph Legesse**
+-   **Nafira Gebre**
 -   **Fanuel Negasi**
 
 ## 🤝 Contributing
