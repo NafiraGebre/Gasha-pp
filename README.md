@@ -1,4 +1,4 @@
-# 🏃‍♂️ Game-1-Runner By Daydream Hackaton 💨
+# 🏃‍♂️ Gasha++ 💨
 
 ![Godot Version](https://img.shields.io/badge/Godot-4.5-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
